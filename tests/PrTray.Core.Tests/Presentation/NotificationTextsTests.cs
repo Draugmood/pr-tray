@@ -25,6 +25,7 @@ public class NotificationTextsTests
         Assert.Equal("acme/widgets#70: Legg til historikk", message.Body);
         Assert.Equal(PullRequest.Url, message.Url);
         Assert.Equal(expectedUrgent, message.IsUrgent);
+        Assert.Equal(NotificationKind.PullRequest, message.Kind);
     }
 
     private static PrEvent CommentedEvent(params Comment[] comments) =>
@@ -39,6 +40,7 @@ public class NotificationTextsTests
         Assert.Equal("acme/widgets#70: Legg til historikk\n«Kan du se på navngivningen her?»", message.Body);
         Assert.Equal("https://github.com/acme/widgets/pull/70#issuecomment-C_1", message.Url);
         Assert.True(message.IsUrgent);
+        Assert.Equal(NotificationKind.Comment, message.Kind);
     }
 
     [Fact]

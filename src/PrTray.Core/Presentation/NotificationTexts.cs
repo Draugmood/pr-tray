@@ -50,7 +50,7 @@ public static class NotificationTexts
             : $"💬 {comments.Count} nye kommentarer fra {JoinNames(authors)}";
         var previewLine = PreviewLine(comments, namesAuthor: authors.Count > 1);
         var body = previewLine is null ? pullRequestLine : $"{pullRequestLine}\n{previewLine}";
-        return new NotificationMessage(title, body, comments[0].Url, IsUrgent: true);
+        return new NotificationMessage(title, body, comments[0].Url, IsUrgent: true, NotificationKind.Comment);
     }
 
     // Inline replies in review threads have no text of their own here, so preview the first comment that has some.
