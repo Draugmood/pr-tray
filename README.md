@@ -9,6 +9,7 @@ Du får skrivebordsvarsler, og et klikk på varselet åpner PR-en, når
 - en PR får nye commits etter en review som ikke var en godkjenning
 - en PR blir godkjent
 - noen ber om endringer på PR-en din
+- noen kommenterer på PR-en din, i samtalen eller i koden (et klikk åpner da selve kommentaren)
 - du blir bedt om review
 - en PR blir merget
 
